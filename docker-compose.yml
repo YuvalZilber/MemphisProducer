@@ -1,0 +1,13 @@
+version: "3"
+services:
+  producer:
+    container_name: producer
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: producer_image:latest
+    tty: true        # docker run -t
+    read_only: true
+    network_mode: "host"
+    volumes:
+      - "~/:/tmp/resources:ro"
