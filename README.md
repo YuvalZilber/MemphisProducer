@@ -1,3 +1,4 @@
+# MemphisProducer
 
 ## ⭐️ Why
 For the job interview 
@@ -9,7 +10,7 @@ For the job interview
 
 ## ✨ Features
 
-- 🚀 Fully optimized message Producer in under 3 minutes
+- 🚀 Fully optimized message producer in under 3 minutes
 - 💻 Easy-to-use CLI
 
 ## Requirements
@@ -26,8 +27,12 @@ For the job interview
 git clone git@github.com:YuvalZilber/MemphisProducer.git && cd MemphisProducer/ && chmod u+x produce && sudo docker-compose up producer -d
 ```
 
-- start Producer:
+- start Producing:
+```bash
+./produce file="$(pwd | sed "s|^$HOME/||")/resources/csv.csv"
+```
+
+for more details, use
 ```bash
 ./produce help
 ```
-it will tellyou how it works
